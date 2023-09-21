@@ -1,6 +1,6 @@
 
 const Head = () => {
-  const resumePdfUrl = "/Resume-Dion.pdf"; // Replace with the actual path to your PDF file
+  const resumePdfUrl = "/Resume-Dion.pdf"; 
 
   const openResume = () => {
     window.open(resumePdfUrl, "_blank");
