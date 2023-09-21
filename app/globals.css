@@ -54,7 +54,7 @@
   @apply font-bold text-3xl mb-12;
 }
 .Styled__about_section p {
-  @apply text-sm leading-relaxed pt-4 text-justify;
+  @apply text-sm leading-relaxed pt-4 text-justify lg:text-base;
 }
 .Styled__about_section span {
   @apply text-custom_blue font-bold;
