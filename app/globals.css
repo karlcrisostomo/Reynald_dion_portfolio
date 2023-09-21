@@ -94,10 +94,10 @@
 }
 
 .Styled__projects__section{
-  @apply  border-2
+  @apply  lg:my-24
 }
 .Project_img_list {
-  @apply pt-8 max-sm:max-w-sm sm:max-w-sm md:max-w-lg lg:max-w-5xl  mx-auto  px-4;
+  @apply pt-8 max-sm:max-w-sm sm:max-w-sm md:max-w-lg lg:max-w-5xl  mx-auto px-4;
 }
 
 .Img_content {
