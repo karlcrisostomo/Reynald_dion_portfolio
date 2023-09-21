@@ -39,15 +39,15 @@ const Experience = () => {
                   <strong>{credential.text}</strong>
 
                   {Array.isArray(credential.description) ? (
-                    <ul>
+                    <ul className>
                       {credential.description.map((exp, expIndex) => (
-                        <li key={expIndex}>
+                        <li className="Styled_bullet"  key={expIndex}>
                           {exp.work} ({exp.position}) - {exp.year}
                         </li>
                       ))}
                     </ul>
                   ) : (
-                    <p>{credential.description}</p>
+                    <p className="Styled_bullet">{credential.description}</p>
                   )}
                 </li>
               ))}

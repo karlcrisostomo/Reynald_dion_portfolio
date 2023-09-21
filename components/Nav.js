@@ -80,7 +80,7 @@ const Nav = () => {
   }, [menu]);
 
   return (
-    <nav className="py-4 z-[99999] relative ">
+    <nav className="py-4 z-[99999] relative lg:max-w-[1560px] mx-auto ">
       <div className="Content__Sizing flex justify-between items-center p-4 sm:max-w-2xl md:max-w-none md:px-6 ">
         <Logo />
         <div className="md:hidden z-50 cursor-pointer">
@@ -104,7 +104,7 @@ const Nav = () => {
               : "hidden"
           }`}
         >
-          <ul className="md:flex lg:text-sm   ">
+          <ul className="md:flex lg:text-base   ">
             {NavLinks.map((link) => (
               <li className=" max-md:pt-6 px-4" key={link.href}>
                 <Link
