@@ -2,15 +2,12 @@
 
 import React, { createContext, useContext, useState } from "react";
 
-// Create a context for managing blur
 const StyledContext = createContext();
 
-// Create a custom hook to access the context
 export const useStyledContext = () => {
   return useContext(StyledContext);
 };
 
-// Create a provider component to wrap your application
 export const StyledContextProvider = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
