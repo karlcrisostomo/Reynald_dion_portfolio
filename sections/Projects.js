@@ -47,7 +47,7 @@ const imageInfo = [
   {
     src: images[5].default,
     alt: "Project 2",
-    text: "GTA 5 Martinez Familia Poster Design",
+    text: "GTA V Martinez Familia Poster Design",
     description: "GTA 5 Martinez Familia Poster Design Designed With Adobe Photoshop",
   },
 ];
