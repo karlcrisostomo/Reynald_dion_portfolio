@@ -6,10 +6,12 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-   
     extend: {
+      fontFamily: {
+        Martian: ["Martian Mono", "sans-serif"],
+      },
       colors: {
-        'custom_blue': "#034efc",
+        custom_blue: "#034efc",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

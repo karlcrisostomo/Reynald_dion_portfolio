@@ -48,7 +48,7 @@ const imageInfo = [
     src: images[5].default,
     alt: "Project 2",
     text: "GTA V Martinez Familia Poster Design",
-    description: "GTA 5 Martinez Familia Poster Design Designed With Adobe Photoshop",
+    description: "GTA V Martinez Familia Poster Design Designed With Adobe Photoshop",
   },
 ];
 
@@ -74,7 +74,7 @@ const Projects = () => {
               <div className={`Img_info_container ${
                 reverseIndices.includes(index) ? 'Reverse_info_container' : 'Even_info_container'
               }`} key={index}>
-                <h1>{item.text}</h1>
+                <h1 className="Styled_h1">{item.text}</h1>
                 <p>{item.description}</p>
               </div>
             </div>

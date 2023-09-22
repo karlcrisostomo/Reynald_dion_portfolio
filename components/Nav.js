@@ -41,6 +41,21 @@ const Nav = () => {
     }
   };
 
+  useEffect(() => {
+    document.body.classList.toggle("menu__open", menu);
+
+    if (menu) {
+      document.addEventListener("click", handleClickOutside);
+    } else {
+      document.removeEventListener("click", handleClickOutside);
+    }
+
+    //cleanup eventlistener
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [menu]);
+  
   const handleLinkClick = (e) => {
     // Prevent the default link behavior
     e.preventDefault();
@@ -64,20 +79,7 @@ const Nav = () => {
     }
   };
 
-  useEffect(() => {
-    document.body.classList.toggle("menu-open", menu);
 
-    if (menu) {
-      document.addEventListener("click", handleClickOutside);
-    } else {
-      document.removeEventListener("click", handleClickOutside);
-    }
-
-    //cleanup eventlistener
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-    };
-  }, [menu]);
 
   return (
     <nav className="py-4 z-[99999] relative lg:max-w-[1560px] mx-auto ">
@@ -100,7 +102,7 @@ const Nav = () => {
           ref={menuRef}
           className={`md:block ${
             menu
-              ? "block absolute right-0  h-screen w-[60%] bg-custom_blue  text-white pt-[6em] font-medium text-xl p-6   top-0"
+              ? "block absolute  right-0  h-screen w-[60%] bg-custom_blue Menu__animation  text-white pt-[6em] font-medium text-xl p-6   top-0"
               : "hidden"
           }`}
         >
@@ -108,7 +110,7 @@ const Nav = () => {
             {NavLinks.map((link) => (
               <li className=" max-md:pt-6 px-4" key={link.href}>
                 <Link
-                  className=" scroll-smooth hover:after:w-10 hover:after:h-[1px] after:block after:bg-custom_blue after:absolute hover:font-bold transition-all hover:tracking-wider  "
+                  className=" hover:after:w-10  hover:tracking-wider hover:font-bold transition-all hover:shadow-lg hover:shadow-custom_blue p-2 rounded-lg  "
                   href={link.href}
                   onClick={handleLinkClick}
                 >

@@ -6,6 +6,7 @@ import { Footer } from "@/components";
 
 const montserrat = Montserrat({
   weight: "400",
+  
   subsets: ["latin"],
 });
 
@@ -19,12 +20,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={montserrat.className}>
         <StyledContextProvider>
-          <div className="grid__layout">
-            <Nav />
-
-            <main className="main">{children}</main>
-
-            <Footer />
+          <div className="Gradient__bg">
+            <div className="grid__layout">
+              <Nav />
+              <main className="main">{children}</main>
+              <Footer />
+            </div>
           </div>
         </StyledContextProvider>
       </body>

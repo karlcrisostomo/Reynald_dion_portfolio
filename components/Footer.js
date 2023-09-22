@@ -26,7 +26,7 @@ const Footer = () => {
           </li>
         ))}
       </ul>
-      <div className="">
+      <div>
         <a
           href="https://github.com/karlcrisostomo"
           target="_blank"

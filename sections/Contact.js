@@ -9,7 +9,7 @@ const Contact = () => {
     <>
       <section>
         <div className="Content__Sizing Styled__Contact_Section">
-          <h1>Get in Touch</h1>
+          <h1 className="Styled_h1">Get in Touch</h1>
 
           <p>
             I'm actively looking for opportunities, and you can always reach out
