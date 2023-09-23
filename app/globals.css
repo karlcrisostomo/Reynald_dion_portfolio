@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @import url("https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300;400;500;600;700&display=swap");
 
 body.scrollbar-hidden {
@@ -21,22 +20,20 @@ body.scrollbar-hidden {
 }
 
 @keyframes Close {
-	0% {
-		opacity: 1;
-		transform: translateX(0);
-	}
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 
-	100% {
-		opacity: 0;
-		transform: translateX(50px);
-	}
+  100% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
 }
 
 .menu__animation___open {
   animation: Open 300ms ease 0s 1 normal forwards;
-
 }
-
 
 body {
   @apply bg-[#FAF8F8];
@@ -83,7 +80,7 @@ body {
   @apply absolute flex flex-col h-[400px];
 }
 .grid_dots {
-  @apply my-auto translate-x-10 shadow-md  ;
+  @apply my-auto translate-x-10 shadow-md;
 }
 .Styled__Feature__Container {
   @apply bg-custom_blue w-[200px] h-[400px] hidden absolute lg:block left-0;
@@ -98,11 +95,11 @@ body {
 }
 
 .Styled_h1 {
-  @apply font-bold max-sm:text-4xl text-5xl  mb-8  font-Martian;
+  @apply font-bold max-sm:text-4xl text-5xl  font-Martian;
 }
 
 .Styled__about_section p {
-  @apply text-sm leading-relaxed pt-4 text-justify lg:text-base;
+  @apply text-sm leading-relaxed  text-justify lg:text-base;
 }
 .Styled__about_section span {
   @apply text-custom_blue font-bold;
@@ -112,7 +109,7 @@ body {
 }
 
 .Styled__about_section li {
-  @apply before:w-5 before:h-2  before:block before:bg-custom_blue flex items-center  before:mr-2 before:rounded-xl ;
+  @apply before:w-5 before:h-2  before:block before:bg-custom_blue flex items-center  before:mr-2 before:rounded-xl;
 }
 
 .Nald__img {
@@ -130,7 +127,7 @@ body {
   @apply w-full;
 }
 .tab_container {
-  @apply my-[10em];
+  @apply max-lg:my-[5em] lg:my-[10em]  max-lg:h-[500px] lg:h-[600px];
 }
 .tab-header {
   @apply flex  justify-center;
@@ -164,7 +161,7 @@ body {
 }
 
 .Styled__projects__section {
-  @apply lg:my-24;
+  @apply max-lg:pt-12 lg:my-24;
 }
 .Project_img_list {
   @apply lg:my-[10em] max-sm:max-w-sm sm:max-w-sm md:max-w-lg lg:max-w-5xl  mx-auto px-4;
@@ -175,7 +172,7 @@ body {
 }
 
 .Img_container {
-  @apply lg:flex lg:flex-row flex-shrink-0   gap-16 pb-10;
+  @apply lg:flex lg:flex-row flex-shrink-0  max-lg:pt-24 gap-16 pb-10;
 }
 
 .Reverse_img {
