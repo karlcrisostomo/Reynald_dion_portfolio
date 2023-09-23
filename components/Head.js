@@ -21,6 +21,8 @@ const Head = () => {
             RESUME
           </button>
         </div>
+
+        
       </section>
     </>
   );

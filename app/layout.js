@@ -6,7 +6,7 @@ import { Footer } from "@/components";
 
 const montserrat = Montserrat({
   weight: "400",
-  
+
   subsets: ["latin"],
 });
 

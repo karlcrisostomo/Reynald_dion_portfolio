@@ -95,7 +95,7 @@ const Experience = () => {
                 }`}
                 onClick={() => setActiveTab(cred.text)}
               >
-                <div className=" tab__text">{cred.text}</div>
+                <div className="tab__text">{cred.text}</div>
               </div>
             ))}
           </div>

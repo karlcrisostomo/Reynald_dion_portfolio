@@ -1,18 +1,16 @@
 import React from "react";
-import { AiOutlineInstagram, AiOutlineGithub } from "react-icons/ai";
-import { FaFacebookSquare } from "react-icons/fa";
-import { ImLinkedin } from "react-icons/im";
+import Image from "next/image";
 
 const Footer = () => {
   // Create an array of icon objects with icons and their corresponding links
   const socialIcons = [
     {
-      icon: <AiOutlineInstagram size={24} />,
-      link: "https://www.instagram.com/",
+      icon: "/assets/fb_icon.svg",
+      link: "# ",
     },
-    { icon: <AiOutlineGithub size={24} />, link: "https://github.com/" },
-    { icon: <FaFacebookSquare size={24} />, link: "https://www.facebook.com/" },
-    { icon: <ImLinkedin size={24} />, link: "https://www.linkedin.com/" },
+    { icon: "/assets/github_icon.svg", link: "https://github.com/" },
+    { icon: "/assets/ig_icon.svg", link: "https://www.facebook.com/" },
+    { icon: "/assets/linked_icon.svg", link: "https://www.linkedin.com/" },
   ];
 
   return (
@@ -21,7 +19,13 @@ const Footer = () => {
         {socialIcons.map((item, index) => (
           <li className="px-4 " key={index}>
             <a href={item.link} target="_blank" rel="noopener noreferrer">
-              {item.icon}
+              <Image
+              className=" aspect-square "
+                src={item.icon}
+                width={32}
+                height={32}
+                alt="social media icons"
+              />
             </a>
           </li>
         ))}
@@ -32,7 +36,7 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <p className=" hover:text-custom_blue transition-all duration-300 flex justify-center text-center max-md:text-sm text-[10px] min-[2000px]:text-[10px] mt-4">
+          <p className=" hover:text-custom_blue transition-all duration-300 flex justify-center text-center max-xl:text-sm xl:text-xs   mt-4">
             in collaboration with Simple_Guyx69
             <span className="ml-2 animate-ping my-auto w-1 h-1 rounded-full bg-custom_blue"></span>
           </p>

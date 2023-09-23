@@ -41,21 +41,6 @@ const Nav = () => {
     }
   };
 
-  useEffect(() => {
-    document.body.classList.toggle("menu__open", menu);
-
-    if (menu) {
-      document.addEventListener("click", handleClickOutside);
-    } else {
-      document.removeEventListener("click", handleClickOutside);
-    }
-
-    //cleanup eventlistener
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-    };
-  }, [menu]);
-  
   const handleLinkClick = (e) => {
     // Prevent the default link behavior
     e.preventDefault();
@@ -78,8 +63,25 @@ const Nav = () => {
       }
     }
   };
+  useEffect(() => {
+    // Add or remove the class based on the menu state
+    if (menu) {
+      document.body.classList.add("scrollbar-hidden");
+    } else {
+      document.body.classList.remove("scrollbar-hidden");
+    }
 
+    if (menu) {
+      document.addEventListener("click", handleClickOutside);
+    } else {
+      document.removeEventListener("click", handleClickOutside);
+    }
 
+    // Cleanup event listener
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [menu]);
 
   return (
     <nav className="py-4 z-[99999] relative lg:max-w-[1560px] mx-auto ">
@@ -100,17 +102,17 @@ const Nav = () => {
         </div>
         <div
           ref={menuRef}
-          className={`md:block ${
+          className={`md:flex ${
             menu
-              ? "block absolute  right-0  h-screen w-[60%] bg-custom_blue Menu__animation  text-white pt-[6em] font-medium text-xl p-6   top-0"
+              ? " absolute right-0  h-screen w-[60%] bg-custom_blue   text-white pt-[6em] font-medium text-xl p-6   top-0"
               : "hidden"
           }`}
         >
           <ul className="md:flex lg:text-base   ">
             {NavLinks.map((link) => (
-              <li className=" max-md:pt-6 px-4" key={link.href}>
+              <li className=" max-md:pt-6 px-2" key={link.href}>
                 <Link
-                  className=" hover:after:w-10  hover:tracking-wider hover:font-bold transition-all hover:shadow-lg hover:shadow-custom_blue p-2 rounded-lg  "
+                  className=" hover:font-bold  hover:tracking-wider transition-all duration-300 hover:shadow-xl p-4  hover:shadow-custom_blue rounded-lg"
                   href={link.href}
                   onClick={handleLinkClick}
                 >

@@ -17,13 +17,13 @@ const About = () => {
   ];
   return (
     <>
-      <section className="Styled__about_section">
+      <section className="Styled__about_section ">
         <div className="Content__Sizing ">
           <h1 className="Styled_h1">About Me</h1>
           <div className="About__container">
             <div>
               <p>
-                I am <span>Reynald Jessamine C. Dion</span>, a
+                I am <span>Reynald Jessamine C. Dion</span>, a{" "}
                 <span>Computer Engineer</span> with two years of experience in
                 photo editing, meme creation, programming, and automation.
                 Today, I am a full-time freelancer who is passionate about

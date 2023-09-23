@@ -4,15 +4,14 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300;400;500;600;700&display=swap");
 
-.Navbar {
-  @apply flex justify-between;
+body.scrollbar-hidden {
+  @apply overflow-hidden;
 }
-
-.menu__open {
-  @apply fixed top-0 right-0 left-0; 
+body {
+  @apply bg-[#FAF8F8];
 }
 .Content__Sizing {
-  @apply container mx-auto lg:max-w-5xl xl:max-w-5xl;
+  @apply container mx-auto  lg:max-w-5xl xl:max-w-5xl;
 }
 .grid__layout {
   @apply bg-[url('/grid.svg')]   top-0 bottom-0 object-cover;
@@ -22,7 +21,7 @@
   @apply p-4 z-50  relative lg:px-9;
 }
 .Header {
-  @apply leading-loose tracking-wider max-md:my-52 lg:my-48;
+  @apply leading-loose tracking-wider max-lg:my-52 lg:my-60;
 }
 
 .Head__btn {
@@ -34,7 +33,7 @@
 }
 
 .Styled__Header {
-  @apply max-sm:max-w-md sm:max-w-md md:max-w-[1050px];
+  @apply max-lg:max-w-lg;
 }
 
 .Styled__Header sub {
@@ -44,16 +43,31 @@
 .Styled__Header p {
   @apply text-base  max-sm:max-w-xs leading-relaxed tracking-normal md:max-w-lg md:text-lg;
 }
+
+.Styled__Feature {
+  @apply hidden lg:block h-[400px];
+}
+
+.Grid__dots__container {
+  @apply absolute flex flex-col h-[400px];
+}
+.grid_dots {
+  @apply my-auto translate-x-10 shadow-md  ;
+}
+.Styled__Feature__Container {
+  @apply bg-custom_blue w-[200px] h-[400px] hidden absolute lg:block left-0;
+}
+
 .Styled__about_section {
   @apply pt-20;
 }
 
 .About__container {
-  @apply lg:grid lg:grid-cols-2 lg:my-[10em] gap-10 max-md:max-w-md;
+  @apply lg:grid lg:grid-cols-2 max-lg:pt-24 lg:my-[10em] gap-10 max-lg:max-w-md mx-auto;
 }
 
 .Styled_h1 {
-  @apply font-bold max-md:text-4xl text-6xl mb-8  font-Martian;
+  @apply font-bold max-sm:text-4xl text-5xl  mb-8  font-Martian;
 }
 
 .Styled__about_section p {
@@ -63,24 +77,27 @@
   @apply text-custom_blue font-bold;
 }
 .Styled__about_section ul {
-  @apply grid grid-cols-2  gap-2 pt-6 text-sm;
+  @apply grid grid-cols-2  gap-2 pt-6 text-sm max-lg:pb-12;
 }
 
 .Styled__about_section li {
-  @apply before:w-5 before:h-2  before:block before:bg-custom_blue flex items-center  before:mr-2 before:rounded-xl;
+  @apply before:w-5 before:h-2  before:block before:bg-custom_blue flex items-center  before:mr-2 before:rounded-xl ;
 }
 
 .Nald__img {
-  @apply shadow-md  border-[1px] rounded-xl  mt-12  contrast-125 max-sm:w-[300px] mx-auto hover:-translate-y-1 hover:-translate-x-1 transition-all duration-200 hover:shadow-xl  hover:shadow-gray-500 md:w-[450px] md:my-auto;
+  @apply shadow-md  border-[1px] rounded-xl   contrast-125 max-sm:w-[300px] mx-auto hover:-translate-y-1 hover:-translate-x-1 transition-all duration-200 hover:shadow-xl  hover:shadow-gray-500 md:w-[450px] md:my-auto;
 }
 
 .Styled__experience_section {
-  @apply my-48  max-md:max-w-md;
+  @apply my-48  max-lg:max-w-md;
 }
 .cred__section {
   @apply my-48;
 }
 
+.tab__panel__container {
+  @apply w-full;
+}
 .tab_container {
   @apply my-[10em];
 }
@@ -88,13 +105,13 @@
   @apply flex  justify-center;
 }
 .tab {
-  @apply max-md:text-base text-2xl cursor-pointer tracking-wider mb-14 flex-1 rounded-lg  py-4 lg:max-w-sm hover:-translate-y-1  hover:-translate-x-1   hover:shadow-lg  hover:text-custom_blue transition-all;
+  @apply max-lg:text-base text-2xl cursor-pointer tracking-wider mb-14 flex-1 rounded-lg  py-4 lg:max-w-sm hover:-translate-y-1 hover:-translate-x-1 transition-all duration-300;
 }
 .tab__text {
-  @apply text-center;
+  @apply text-center font-Martian;
 }
 .tab__panel {
-  @apply max-md:p-8;
+  @apply max-lg:p-8;
 }
 .tab__li {
   @apply max-sm:text-sm pb-5;
@@ -112,7 +129,7 @@
 }
 
 .Styled_bullet {
-  @apply before:w-5 before:h-2   before:bg-custom_blue flex items-center  before:mr-2 before:rounded-xl;
+  @apply before:w-5 before:h-2 before:bg-custom_blue flex items-center  before:mr-2 before:rounded-xl;
 }
 
 .Styled__projects__section {
@@ -152,7 +169,7 @@
 }
 
 .Styled__Contact_Section {
-  @apply my-48 text-center max-md:max-w-md;
+  @apply my-48 text-center max-lg:max-w-md;
 }
 
 .Styled__Contact_Section p {
@@ -160,4 +177,7 @@
 }
 .Styled__Contact_Section button {
   @apply mt-12 p-4 rounded-lg border-custom_blue border-2 bg-white font-bold   hover:shadow-xl hover:shadow-custom_blue hover:-translate-y-1 hover:-translate-x-1 transition-all duration-200 hover:before:w-[10em];
+}
+.Styled__Contact_Section h1 {
+  @apply lg:text-6xl;
 }
