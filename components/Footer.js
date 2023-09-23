@@ -6,10 +6,16 @@ const Footer = () => {
   const socialIcons = [
     {
       icon: "/assets/fb_icon.svg",
-      link: "# ",
+      link: "https://www.facebook.com/Nald.dlll ",
     },
-    { icon: "/assets/github_icon.svg", link: "https://github.com/" },
-    { icon: "/assets/ig_icon.svg", link: "https://www.facebook.com/" },
+    {
+      icon: "/assets/github_icon.svg",
+      link: "https://github.com/kimbamartinez",
+    },
+    {
+      icon: "/assets/ig_icon.svg",
+      link: "https://www.instagram.com/nald.dllc/",
+    },
     { icon: "/assets/linked_icon.svg", link: "https://www.linkedin.com/" },
   ];
 
