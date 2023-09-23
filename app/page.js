@@ -3,7 +3,7 @@ import { Head } from "@/components";
 import Feature from "@/components/Feature";
 import { useStyledContext } from "@/context/StyledContext";
 import { About, Contact, Experience, Projects } from "@/sections";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 const Page = () => {
   const { isMenuOpen } = useStyledContext();
