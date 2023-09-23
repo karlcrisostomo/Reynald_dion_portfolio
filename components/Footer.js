@@ -17,10 +17,13 @@ const Footer = () => {
     <div className="py-20">
       <ul className="flex items-center justify-center ">
         {socialIcons.map((item, index) => (
-          <li className="px-4 " key={index}>
+          <li
+            className="px-4  hover:-translate-y-1 hover:-translate-x-1 hover:shadow-xl p-4 rounded-lg hover:shadow-custom_blue transition-all duration-300 "
+            key={index}
+          >
             <a href={item.link} target="_blank" rel="noopener noreferrer">
               <Image
-              className=" aspect-square "
+                className=" "
                 src={item.icon}
                 width={32}
                 height={32}
@@ -36,7 +39,7 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <p className=" hover:text-custom_blue transition-all duration-300 flex justify-center text-center max-xl:text-sm xl:text-xs   mt-4">
+          <p className=" hover:text-custom_blue ml-4 transition-all duration-300 flex justify-center text-center max-xl:text-sm xl:text-xs   mt-4">
             in collaboration with Simple_Guyx69
             <span className="ml-2 animate-ping my-auto w-1 h-1 rounded-full bg-custom_blue"></span>
           </p>
