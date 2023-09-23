@@ -18,6 +18,23 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      animation: {
+        open: "Open 300ms ease 0s 1 normal forwards",
+      },
+      keyframes: {
+        Open: {
+          "0%": {
+            opacity: 0,
+            transform: "translateX(32px)",
+            overflow: "hidden",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translateX(0)",
+            overflow: "hidden",
+          },
+        },
+      },
     },
   },
   plugins: [],

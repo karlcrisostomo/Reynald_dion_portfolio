@@ -8,7 +8,7 @@ import { HiMenuAlt4 } from "react-icons/hi";
 import Logo from "./Logo";
 import { useStyledContext } from "@/context/StyledContext";
 
-import "animate.css"
+import "animate.css";
 const Nav = () => {
   const [menu, setMenu] = useState(false);
   const { setIsMenuOpen, toggleTheme } = useStyledContext();
@@ -103,9 +103,9 @@ const Nav = () => {
         </div>
         <div
           ref={menuRef}
-          className={`md:flex menu__animation  ${
+          className={`md:flex  ${
             menu
-              ? " absolute right-0  h-screen w-[60%] bg-custom_blue  menu__animation___open text-white pt-[6em] font-medium text-xl p-6   top-0"
+              ? " absolute right-0 h-screen w-[60%] bg-custom_blue text-white pt-[6em] font-medium text-xl p-6 animate__animate animate__fadeInRight  top-0"
               : "  hidden"
           }`}
         >
