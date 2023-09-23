@@ -8,6 +8,7 @@ import { HiMenuAlt4 } from "react-icons/hi";
 import Logo from "./Logo";
 import { useStyledContext } from "@/context/StyledContext";
 
+import "animate.css"
 const Nav = () => {
   const [menu, setMenu] = useState(false);
   const { setIsMenuOpen, toggleTheme } = useStyledContext();
@@ -84,14 +85,14 @@ const Nav = () => {
   }, [menu]);
 
   return (
-    <nav className="py-4 z-[99999] relative lg:max-w-[1560px] mx-auto ">
+    <nav className="py-4 z-[99999] relative lg:max-w-[1560px] mx-auto  ">
       <div className="Content__Sizing flex justify-between items-center p-4 sm:max-w-2xl md:max-w-none md:px-6 ">
         <Logo />
         <div className="md:hidden z-50 cursor-pointer">
           {menu ? (
             <AiOutlineClose size={32} onClick={toggleMenu} />
           ) : (
-            <div className=" border-2 rounded-lg border-gray-300 hover:shadow-lg  hover:border-custom_blue transition-all duration-300">
+            <div className="  border-2 rounded-lg border-gray-300 hover:shadow-lg  hover:border-custom_blue transition-all duration-300">
               <HiMenuAlt4
                 size={28}
                 onClick={toggleMenu}
@@ -102,10 +103,10 @@ const Nav = () => {
         </div>
         <div
           ref={menuRef}
-          className={`md:flex ${
+          className={`md:flex menu__animation  ${
             menu
-              ? " absolute right-0  h-screen w-[60%] bg-custom_blue   text-white pt-[6em] font-medium text-xl p-6   top-0"
-              : "hidden"
+              ? " absolute right-0  h-screen w-[60%] bg-custom_blue  menu__animation___open text-white pt-[6em] font-medium text-xl p-6   top-0"
+              : "  hidden"
           }`}
         >
           <ul className="md:flex lg:text-base   ">
