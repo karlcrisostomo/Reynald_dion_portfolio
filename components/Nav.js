@@ -88,11 +88,11 @@ const Nav = () => {
     <nav className="py-4 z-[99999] relative lg:max-w-[1560px] mx-auto  ">
       <div className="Content__Sizing flex justify-between items-center p-4 sm:max-w-2xl md:max-w-none md:px-6 ">
         <Logo />
-        <div className="md:hidden z-50 cursor-pointer">
+        <div className="md:hidden z-50 cursor-pointer ">
           {menu ? (
-            <AiOutlineClose size={32} onClick={toggleMenu} />
+            <AiOutlineClose color="white" size={32} onClick={toggleMenu} />
           ) : (
-            <div className="  border-2 rounded-lg border-gray-300 hover:shadow-lg  hover:border-custom_blue transition-all duration-300">
+            <div className="border-2 rounded-lg border-gray-300 hover:shadow-lg hover:scale-105 hover:shadow-custom_blue  hover:border-custom_blue transition-all duration-300">
               <HiMenuAlt4
                 size={28}
                 onClick={toggleMenu}
