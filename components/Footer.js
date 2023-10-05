@@ -45,7 +45,7 @@ const Footer = () => {
           rel="noopener noreferrer"
         >
           <p className=" hover:text-custom_blue ml-4 transition-all duration-300 flex justify-center text-center max-xl:text-sm xl:text-xs   mt-4">
-            In collaboration with Simple_Guyx69
+            In collaboration with Karl Crisostomo
             <span className="ml-2 animate-ping my-auto w-1 h-1 rounded-full bg-custom_blue"></span>
           </p>
         </a>
