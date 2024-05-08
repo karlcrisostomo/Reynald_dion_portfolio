@@ -57,7 +57,7 @@ const reverseIndices = [1, 3, 5];
 
 const Projects = () => {
   return (
-    <section>
+    <section id="projects">
       <div className="Content__Sizing Styled__projects__section">
         <h1 className="Styled_h1">Some Things I've Built</h1>
         <div className="Project_img_list">

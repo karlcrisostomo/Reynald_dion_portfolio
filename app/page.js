@@ -1,40 +1,51 @@
 "use client";
-import { Head } from "@/components";
+import { Head, ScrollToTop, StyledSection } from "@/components";
 import Feature from "@/components/Feature";
 import { useStyledContext } from "@/context/StyledContext";
 import { About, Contact, Experience, Projects } from "@/sections";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 
 const Page = () => {
   const { isMenuOpen } = useStyledContext();
   const scrollContainerRef = useRef(null);
 
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const smoothScroll = new LocomotiveScroll({
+        lenisOptions: {
+          duration: 3.5,
+        },
+      });
+    })();
+  }, []);
+
   return (
     <div
       ref={scrollContainerRef}
-      className={` ${
+      className={` max-md:p-3 ${
         isMenuOpen
           ? "blur-sm h-screen pointer-events-none"
-          : "bg-inherit pointer-events-auto"
+          : " pointer-events-auto"
       }`}
     >
-      <section id="home">
-        <Head />
-        <Feature />
-      </section>
+      <Head />
 
-      <section id="about">
+      <StyledSection>
         <About />
-      </section>
-      <section id="experience">
+      </StyledSection>
+
+      <StyledSection>
         <Experience />
-      </section>
-      <section id="works">
+      </StyledSection>
+
+      <StyledSection>
         <Projects />
-      </section>
-      <section id="contact">
+      </StyledSection>
+
+      <StyledSection>
         <Contact />
-      </section>
+      </StyledSection>
     </div>
   );
 };

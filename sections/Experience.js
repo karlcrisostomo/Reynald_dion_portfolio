@@ -82,7 +82,7 @@ const Experience = () => {
   const [activeTab, setActiveTab] = useState("Education"); // Set the default active tab to "Education"
 
   return (
-    <section className="cred__section">
+    <section className="cred__section" id="experience">
       <div className=" Content__Sizing">
         <h1 className="Styled_h1">Background</h1>
         <div className="tab_container">

@@ -1,8 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300;400;500;600;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url("https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300;400;500;600;700&display=swap");
 
 body.scrollbar-hidden {
   @apply overflow-hidden;
@@ -12,7 +11,7 @@ body {
   @apply bg-[#FAF8F8];
 }
 .Content__Sizing {
-  @apply container mx-auto  lg:max-w-5xl xl:max-w-5xl;
+  @apply container mx-auto  lg:max-w-5xl  2xl:max-w-6xl;
 }
 .grid__layout {
   @apply bg-[url('/grid.svg')]   top-0 bottom-0 object-cover;
@@ -22,7 +21,7 @@ body {
   @apply p-4 z-50  relative lg:px-9;
 }
 .Header {
-  @apply leading-loose tracking-wider max-lg:my-52 lg:my-60;
+  @apply leading-loose tracking-wider h-screen flex flex-col  max-xl:items-center lg:max-w-5xl mx-auto xl:max-w-6xl  justify-center;
 }
 
 .Head__btn {
@@ -34,7 +33,7 @@ body {
 }
 
 .Styled__Header {
-  @apply max-lg:max-w-lg;
+  @apply flex flex-col gap-2   max-xl:max-w-lg;
 }
 
 .Styled__Header sub {
@@ -42,33 +41,33 @@ body {
 }
 
 .Styled__Header p {
-  @apply text-base  max-sm:max-w-xs leading-relaxed tracking-normal md:max-w-lg md:text-lg;
+  @apply text-base  max-sm:max-w-md leading-relaxed tracking-normal md:max-w-xl md:text-lg;
 }
 
 .Styled__Feature {
-  @apply hidden lg:block h-[400px];
+  @apply hidden lg:block  h-[400px]  pointer-events-none;
 }
 
 .Grid__dots__container {
-  @apply absolute flex flex-col h-[400px];
+  @apply absolute flex left-[5vw] flex-col h-[400px];
 }
 .grid_dots {
-  @apply my-auto translate-x-10 shadow-md;
+  @apply my-auto  shadow-md;
 }
 .Styled__Feature__Container {
   @apply bg-custom_blue w-[200px] h-[400px] hidden absolute lg:block left-0;
 }
 
 .Styled__about_section {
-  @apply pt-20;
+  @apply h-screen  flex flex-col ;
 }
 
 .About__container {
-  @apply lg:grid lg:grid-cols-2 max-lg:pt-24 lg:my-[10em] gap-10 max-lg:max-w-md mx-auto;
+  @apply lg:grid lg:grid-cols-2 h-screen mt-20 gap-4 max-lg:max-w-md mx-auto;
 }
 
 .Styled_h1 {
-  @apply font-bold max-sm:text-4xl text-5xl  font-Martian;
+  @apply font-bold max-sm:text-4xl text-5xl xl:text-6xl font-Martian;
 }
 
 .Styled__about_section p {
@@ -169,15 +168,22 @@ body {
   @apply text-sm text-left leading-relaxed;
 }
 
+.Styled_contact {
+  @apply font-Martian font-bold uppercase text-7xl lg:text-8xl xl:text-9xl;
+}
+.Styled_contact p {
+  @apply h-fit pb-4;
+}
+
 .Styled__Contact_Section {
-  @apply my-48 text-center max-lg:max-w-md;
+  @apply h-screen justify-center  flex flex-col  gap-6 text-center max-lg:max-w-md relative;
 }
 
 .Styled__Contact_Section p {
-  @apply max-sm:max-w-xs mx-auto sm:max-w-md mt-[5em];
+  @apply max-sm:max-w-xs mx-auto  sm:max-w-md;
 }
 .Styled__Contact_Section button {
-  @apply mt-12 p-4 rounded-lg border-custom_blue border-2 bg-white font-bold   hover:shadow-xl hover:shadow-custom_blue hover:-translate-y-1 hover:-translate-x-1 transition-all duration-200 hover:before:w-[10em];
+  @apply mt-12 p-4 rounded-lg  w-fit  mx-auto border-custom_blue border-2 bg-white font-bold   hover:shadow-xl hover:shadow-custom_blue hover:-translate-y-1 hover:-translate-x-1 transition-all duration-200 hover:before:w-[10em];
 }
 .Styled__Contact_Section h1 {
   @apply lg:text-6xl;

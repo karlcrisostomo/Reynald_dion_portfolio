@@ -8,7 +8,6 @@ import { HiMenuAlt4 } from "react-icons/hi";
 import Logo from "./Logo";
 import { useStyledContext } from "@/context/StyledContext";
 
-import "animate.css";
 const Nav = () => {
   const [menu, setMenu] = useState(false);
   const { setIsMenuOpen, toggleTheme } = useStyledContext();
@@ -27,7 +26,6 @@ const Nav = () => {
   };
 
   useEffect(() => {
-    // Add an event listener for the window resize event
     window.addEventListener("resize", handleResize);
 
     return () => {
@@ -43,29 +41,24 @@ const Nav = () => {
   };
 
   const handleLinkClick = (e) => {
-    // Prevent the default link behavior
     e.preventDefault();
 
-    // Close the menu when a link is clicked
     setMenu(false);
     setIsMenuOpen(false);
 
-    // Get the target element's ID or href
     const target = e.currentTarget.getAttribute("href");
 
-    // Scroll to the target element smoothly
     if (target) {
       const targetElement = document.querySelector(target);
       if (targetElement) {
         targetElement.scrollIntoView({
           behavior: "smooth",
-          block: "start", // You can adjust this as needed
+          block: "start",
         });
       }
     }
   };
   useEffect(() => {
-    // Add or remove the class based on the menu state
     if (menu) {
       document.body.classList.add("scrollbar-hidden");
     } else {
@@ -78,7 +71,6 @@ const Nav = () => {
       document.removeEventListener("click", handleClickOutside);
     }
 
-    // Cleanup event listener
     return () => {
       document.removeEventListener("click", handleClickOutside);
     };
@@ -105,7 +97,7 @@ const Nav = () => {
           ref={menuRef}
           className={`md:flex  ${
             menu
-              ? " absolute right-0 h-screen w-[60%] bg-custom_blue text-white pt-[6em] font-medium text-xl p-6 animate__animate animate__fadeInRight  top-0"
+              ? " absolute right-0 h-screen w-[80%] bg-custom_blue text-white pt-[6em] font-medium text-xl p-6 animate__animate animate__fadeInRight  top-0"
               : "  hidden"
           }`}
         >
