@@ -59,7 +59,7 @@ const Head = () => {
         </motion.div>
       </div>
 
-      <Feature/>
+  
     </section>
   );
 };
