@@ -18,9 +18,8 @@ const About = () => {
   return (
     <section className="Styled__about_section " id="about">
       <div className="Content__Sizing ">
-      <h1 className="Styled_h1 ">About Me</h1>
+        <h1 className="Styled_h1 ">About Me</h1>
         <div className="About__container">
-          
           <div>
             <p>
               I am <span>Reynald Jessamine C. Dion</span>, a{" "}
@@ -45,7 +44,9 @@ const About = () => {
               width={500}
               height={500}
               alt="image"
-            ></Image>
+              priority
+              quality={65}
+            />
           </div>
         </div>
       </div>

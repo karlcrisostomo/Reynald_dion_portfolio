@@ -1,6 +1,5 @@
 "use client";
-import { Head, ScrollToTop, StyledSection } from "@/components";
-import Feature from "@/components/Feature";
+import { Footer, Head, StyledSection } from "@/components";
 import { useStyledContext } from "@/context/StyledContext";
 import { About, Contact, Experience, Projects } from "@/sections";
 import { useRef, useEffect } from "react";
@@ -46,6 +45,8 @@ const Page = () => {
       <StyledSection>
         <Contact />
       </StyledSection>
+
+      <Footer />
     </div>
   );
 };

@@ -4,12 +4,14 @@ const Footer = () => {
   return (
     <div className="py-20">
       <ul className="flex items-center justify-center  ">
-        {socMedIcons.map((item, index) => (
-          <a href={item.link} target="_blank" rel="noopener noreferrer">
-            <li
-              className="px-4 hover:-translate-y-1 hover:-translate-x-1 hover:shadow-xl p-4 rounded-lg hover:shadow-custom_blue transition-all duration-300 "
-              key={index}
-            >
+        {socMedIcons.map((item, idx) => (
+          <a
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            key={idx}
+          >
+            <li className="px-4 hover:-translate-y-1 hover:-translate-x-1 hover:shadow-xl p-4 rounded-lg hover:shadow-custom_blue transition-all duration-300 ">
               <Image
                 src={item.icon}
                 width={32}
