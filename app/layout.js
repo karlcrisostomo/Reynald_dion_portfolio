@@ -24,6 +24,7 @@ export default function RootLayout({ children }) {
             <div className="grid__layout">
               <Nav />
               <main className="main">{children}</main>
+              <Footer />
             </div>
           </div>
         </StyledContextProvider>

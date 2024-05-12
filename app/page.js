@@ -1,12 +1,12 @@
 "use client";
-import { Footer, Head, StyledSection } from "@/components";
+import { Head, ScrollToTop, StyledSection } from "@/components";
 import Feature from "@/components/Feature";
 import { useStyledContext } from "@/context/StyledContext";
 import { About, Contact, Experience, Projects } from "@/sections";
 import { useRef, useEffect } from "react";
 
 const Page = () => {
-  const { isMenuOpen, menu } = useStyledContext();
+  const { isMenuOpen } = useStyledContext();
   const scrollContainerRef = useRef(null);
 
   useEffect(() => {
@@ -25,8 +25,8 @@ const Page = () => {
       ref={scrollContainerRef}
       className={` max-md:p-3 ${
         isMenuOpen
-          ? "blur-sm pointer-events-none"
-          : " pointer-events-auto "
+          ? "blur-sm h-screen pointer-events-none"
+          : " pointer-events-auto"
       }`}
     >
       <Head />
@@ -46,7 +46,6 @@ const Page = () => {
       <StyledSection>
         <Contact />
       </StyledSection>
-      <Footer />
     </div>
   );
 };

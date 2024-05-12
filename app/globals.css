@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body.scrollbar-hidden {
+  @apply overflow-hidden;
+}
+
 body {
   @apply bg-[#FAF8F8];
 }

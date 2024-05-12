@@ -1,18 +1,15 @@
 import Image from "next/image";
 import { socMedIcons } from "@/constant";
-
 const Footer = () => {
   return (
-    <section className=" py-20 ">
-      <ul className="flex items-center justify-center   ">
-        {socMedIcons.map((item, idx) => (
-          <a
-            href={item.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            key={idx}
-          >
-            <li className="px-4 hover:-translate-y-1 hover:-translate-x-1 hover:shadow-xl p-4 rounded-lg hover:shadow-custom_blue transition-all duration-300 ">
+    <div className="py-20">
+      <ul className="flex items-center justify-center  ">
+        {socMedIcons.map((item, index) => (
+          <a href={item.link} target="_blank" rel="noopener noreferrer">
+            <li
+              className="px-4 hover:-translate-y-1 hover:-translate-x-1 hover:shadow-xl p-4 rounded-lg hover:shadow-custom_blue transition-all duration-300 "
+              key={index}
+            >
               <Image
                 src={item.icon}
                 width={32}
@@ -35,7 +32,7 @@ const Footer = () => {
           </p>
         </a>
       </div>
-    </section>
+    </div>
   );
 };
 
