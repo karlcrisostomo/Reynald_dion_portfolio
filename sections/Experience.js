@@ -2,6 +2,56 @@
 
 import { useState } from "react";
 
+const Experience = () => {
+  const credentials = [
+    {
+      text: "Education",
+      component: <Education />,
+    },
+    {
+      text: "Work Experience",
+      component: <WorkExperience />,
+    },
+  ];
+
+  const [activeTab, setActiveTab] = useState("Education"); 
+
+  return (
+    <section className="cred__section" id="experience">
+      <div className=" Content__Sizing">
+        <h1 className="Styled_h1">Background</h1>
+        <div className="tab_container">
+          <div className="tab-header">
+            {credentials.map((cred, idx) => (
+              <div
+                key={idx}
+                className={`tab  ${
+                  activeTab === cred.text ? "active-tab" : ""
+                }`}
+                onClick={() => setActiveTab(cred.text)}
+              >
+                <div className="tab__text">{cred.text}</div>
+              </div>
+            ))}
+          </div>
+          <div className="tab-content">
+            {credentials.map((cred, idx) => (
+              <div
+                key={idx}
+                className={`tab__panel ${
+                  activeTab === cred.text ? "tab_panel_active" : "hidden"
+                }`}
+              >
+                {cred.component}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const Education = () => {
   const educBackround = [
     {
@@ -64,56 +114,6 @@ const WorkExperience = () => {
         </li>
       ))}
     </ul>
-  );
-};
-
-const Experience = () => {
-  const credentials = [
-    {
-      text: "Education",
-      component: <Education />,
-    },
-    {
-      text: "Work Experience",
-      component: <WorkExperience />,
-    },
-  ];
-
-  const [activeTab, setActiveTab] = useState("Education"); // Set the default active tab to "Education"
-
-  return (
-    <section className="cred__section" id="experience">
-      <div className=" Content__Sizing">
-        <h1 className="Styled_h1">Background</h1>
-        <div className="tab_container">
-          <div className="tab-header">
-            {credentials.map((cred, idx) => (
-              <div
-                key={idx}
-                className={`tab  ${
-                  activeTab === cred.text ? "active-tab" : ""
-                }`}
-                onClick={() => setActiveTab(cred.text)}
-              >
-                <div className="tab__text">{cred.text}</div>
-              </div>
-            ))}
-          </div>
-          <div className="tab-content">
-            {credentials.map((cred, idx) => (
-              <div
-                key={idx}
-                className={`tab__panel ${
-                  activeTab === cred.text ? "tab_panel_active" : "hidden"
-                }`}
-              >
-                {cred.component}
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
   );
 };
 
